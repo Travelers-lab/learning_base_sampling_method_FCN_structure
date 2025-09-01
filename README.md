@@ -19,54 +19,6 @@ Traditional random sampling in path planning can be inefficient, especially in c
 ---
 
 ## Project Structure
-learning_base_sampling_method_FCN_structure
-├── README.md 
-├── requirements.txt  
-├── config/
-│ ├── data_generation_config.yaml 
-│ ├── model_config.yaml 
-│ ├── training_config.yaml 
-│ └── inference_config.yaml 
-├── data/ 
-│ ├── raw/ 
-│ │ ├── maps/ 
-│ │ ├── start_goal_pairs/ 
-│ │ ├── paths/ 
-│ │ ├── distance_maps/ 
-│ │ └── heatmaps/ 
-│ └── processed/ 
-│ │ ├── train/ 
-│ │ ├── val/ 
-│ │ └── test/ 
-├── src/ 
-│ ├── data/ 
-│ ├── models/ 
-│ ├── training/ 
-│ ├── inference/ 
-│ └── utils/ 
-├── scripts/ 
-│ ├── create_project_structure.py 
-│ ├── generate_dataset.py 
-│ ├── dataset_building.py 
-│ ├── train.py 
-│ ├── sample_paths.py 
-├── notebooks/ 
-│ ├── data_exploration.ipynb 
-│ ├── training_analysis.ipynb 
-│ ├── sampling_visualization.ipynb 
-│ └── comparison.ipynb 
-└── results/ 
-├── models/ 
-│ ├── checkpoints/ 
-│ └── best_model.pth 
-├── logs/ │
- └── tensorboard/ 
- └── visualizations/ 
- ├── training_curves/ 
- ├── heatmap_predictions/ 
- ├── comparison_results/ 
- └── path_examples/
-
 **Component Overview:**
 
 | Directory/File         | Purpose                                                                 |
