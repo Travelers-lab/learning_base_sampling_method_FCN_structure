@@ -129,29 +129,23 @@ Configure parameters in
 config/data_generation_config.yaml.
 ```
 Run generate_dataset.py to create synthetic maps, start/goal pairs, paths, distance transforms, and heatmaps.
-Use dataset_building.py to split data into train/val/test sets.
+Use dataset_building.py to split data into `train/val/test` sets.
 ### Model Training
-Edit config/model_config.yaml and config/training_config.yaml for architecture and hyperparameters.
+Edit `config/model_config.yaml` and `config/training_config.yaml` for architecture and hyperparameters.
 Run train.py to start training.
-Checkpoints and logs are saved in results/models/ and results/logs/.
+Checkpoints and logs are saved in `results/models/` and `results/logs/`.
 ### Inference & Sampling
-Set parameters in config/inference_config.yaml (e.g., model path, lambda for hybrid sampling).
-Use sample_paths.py to run inference and sample points for path planning.
-Visualize results using scripts in src/utils/visualization.py or Jupyter notebooks.
+Set parameters in `config/inference_config.yaml` (e.g., model path, lambda for hybrid sampling).
+Use `sample_paths.py` to run inference and sample points for path planning.
+Visualize results using scripts in `src/utils/visualization.py` or Jupyter notebooks.
 ### Configuration Files
-data_generation_config.yaml: Map size, obstacle types, RRT parameters, dataset size.
-model_config.yaml: U-Net channels, batch norm, activation.
-training_config.yaml: Batch size, epochs, optimizer, scheduler, checkpointing.
-inference_config.yaml: Model path, sampling lambda, device.
-## Configuration
-File	Key Parameters & Description
-data_generation_config.yaml	Map size, obstacle types/sizes, RRT params, Gaussian sigma, splits
-model_config.yaml	U-Net depth, channels, batch norm, activation
-training_config.yaml	Batch size, epochs, optimizer, scheduler, patience, logging
-inference_config.yaml	Model path, lambda for hybrid sampling, device
+ - `data_generation_config.yaml`: Map size, obstacle types, RRT parameters, dataset size.
+ - 1model_config.yaml1: U-Net channels, batch norm, activation.
+ - `raining_config.yaml`: Batch size, epochs, optimizer, scheduler, checkpointing.
+ - `inference_config.yaml`: Model path, sampling lambda, device.
 ### Example:
 ``` bash
-# [inference_config.yaml](http://_vscodecontentref_/4)
+# inference_config.yaml
 inference:
   model_path: "results/models/best_model.pth"
   device: "cpu"
@@ -159,14 +153,14 @@ sampling:
   lambda_prob: 0.7
 ```
 ## Results & Visualization
- - **Models:** Saved in results/models/
- - **Logs:** TensorBoard logs in results/logs/tensorboard/
+ - **Models:** Saved in `results/models/`
+ - **Logs:** TensorBoard logs in `results/logs/tensorboard/`
  - **Visualizations:**
-    * Training curves: results/visualizations/training_curves/
-    * Predicted heatmaps: results/visualizations/heatmap_predictions/
-    * Path examples: results/visualizations/path_examples/
+    * Training curves: `results/visualizations/training_curves/`
+    * Predicted heatmaps:`results/visualizations/heatmap_predictions/`
+    * Path examples: `results/visualizations/path_examples/`
  - **How to visualize:**
-Use src/utils/visualization.py or Jupyter notebooks to plot probability maps, sampled points, and planned paths.
+Use `src/utils/visualization.py` or Jupyter notebooks to plot probability maps, sampled points, and planned paths.
 ### Expected Output Example:
  - Probability heatmap showing high values along feasible paths.
  - Sampled points concentrated in promising regions.
@@ -174,7 +168,3 @@ Use src/utils/visualization.py or Jupyter notebooks to plot probability maps, sa
 
 ## License
 This project is licensed under the MIT License.
-
-
-
-
