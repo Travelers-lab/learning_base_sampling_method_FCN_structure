@@ -1,0 +1,18 @@
+map_params:
+  size: 128
+  num_obstacles_range: [2, 4]
+  obstacle_size_range: [16, 24]
+  obstacle_types: ["triangle", "square", "circle"]
+
+start_goal_params:
+  min_distance: 50
+
+path_planning_params:
+  step_size: 3.0
+  max_iterations: 10000
+
+label_params:
+  gaussian_sigma: 5.0
+
+dataset_params:
+  num_samples: 10000

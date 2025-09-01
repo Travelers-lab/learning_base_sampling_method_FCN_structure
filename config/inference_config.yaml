@@ -1,0 +1,6 @@
+inference:
+  model_path: "results/models/best_model.pth"
+  device: "cpu"
+
+sampling:
+  lambda_prob: 0.7
